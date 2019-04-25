@@ -1,0 +1,5 @@
+server:
+  address: localhost
+  port: 80
+  servlet:
+    application-display-name: SpringBootStudy

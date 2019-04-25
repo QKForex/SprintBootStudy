@@ -1,0 +1,22 @@
+kafka:
+  botstrapServers: 10.251.66.24.9092
+  groupId: test-consumer-group
+  enableAutoCommit: false
+  autoOffsetReset: earliest
+  maxPollRecords: 2000
+  keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+  valueDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+  batchsize: 4000
+  waitsecond: 10
+  topicList: dpc_feature_poc,dpc_kafka_producer_poc
+  resetOffsetList: dpc_kafka_producer_poc|0:0;dpc_feature_poc|0:0
+  cacheFilePath: D:/Lenovo/DPC/ADI
+datasource:
+  jdbcUrl: jdbc:mysql://192.168.10.15:3306/DPC
+  driverClass: com.mysql.jdbc.Driver
+  jdbcUser: root
+  jdbcPasswd: Abcd@1234
+  jdbcPoolInitialSize: 5
+  jdbcPoolMaxIdle: 30
+  jdbcPoolMaxActive: 20
+  jdbcPoolMaxWait: 10
